@@ -1,3 +1,4 @@
+/* Mobile Menu */
 const button = document.getElementById('menu-btn')
 const navi = document.getElementById('menu')
 
