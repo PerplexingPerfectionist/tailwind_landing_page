@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind Landing Page</title>
+
+        <link rel="shortcut icon" href="./assets/Logo-1.png" type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body class="dark:text-white dark:backdrop-invert dark:bg-zinc-200">
+        <!-- Nav -->
+        <nav class="relative container mx-auto p-6">
+            <div class="flex items-center justify-between relative">
+                <!-- Logo -->
+                <div class="pt-2">
+                    <img src="./assets/Logo-1.png" alt="logo" class="h-24 dark:invert" />
+                </div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-darkGreyishBlue">Pricing</a>
+                    <a href="#" class="hover:text-darkGreyishBlue">Product</a>
+                    <a href="#" class="hover:text-darkGreyishBlue">About Us</a>
+                    <a href="#" class="hover:text-darkGreyishBlue">Careers</a>
+                    <a href="#" class="hover:text-darkGreyishBlue">Community</a>
+                </div>
+                <!-- Button -->
+                <a href="#" class="hidden md:block p-3 px-6 mr-12 text-white bg-brightRed rounded-full hover:bg-brightRedLight">Get Started</a>
+                <!-- Dark Mode -->
+                <span class="absolute right-0 cursor-pointer" id="dayNight">
+                    <img src="./assets/moon.png" alt="" id="moon" class="h-8">
+                    <img src="./assets/sun.png" alt="" id="sun" class="hidden h-8 dark:invert">
+                </span>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="block mr-12 mt-2 hamburger md:hidden">
+                    <span class="hamburger-top dark:invert"></span>
+                    <span class="hamburger-middle dark:invert"></span>
+                    <span class="hamburger-bottom dark:invert"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <div id="menu" class="hidden absolute z-50 flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white dark:bg-zinc-700 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <a href="#">Pricing</a>
+                    <a href="#">Product</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Community</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section id="hero" class="relative">
+            <div class="absolute h-full w-full -z-10 bg-gradient-to-b from-brightRedSupLight to-brightRedLight opacity-50 dark:bg-zinc-700"></div>
+            <div class="container flex flex-row px-6 py-32 justify-center mx-auto">
+                <div class="flex flex-col items-center mx-auto md:w-1/2">
+                    <h1 class="max-w-md text-4xl text-center font-bold md:text-5xl">
+                        Join Our Team!
+                    </h1>
+                    <p class="max-w-md text-center py-6">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis praesentium distinctio asperiores, nisi animi eos eaque ipsum laborum blanditiis sed.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features">
+            <div class="container flex flex-col-reverse justify-center mx-auto md:flex-row">
+                <!-- Left -->
+                <div class="flex flex-col justify-center px-12 py-24 md:w-1/2 space-y-6">
+                    <div class="w-24 h-[2px] bg-brightRed mx-auto md:mx-0"></div>
+                    <h2 class="max-w-xl text-center md:text-left text-4xl lg:text-5xl">
+                        Ready to Help Change the Way Business are Run?
+                    </h2>
+                    <p class="max-w-lg text-center md:text-left">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime eius omnis quaerat consectetur beatae accusamus cum voluptates. In quidem tempore eligendi. Distinctio suscipit deleniti assumenda accusantium nihil libero, mollitia consequatur?
+                    </p>
+                    <p class="max-w-lg text-center md:text-left">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate possimus id nemo suscipit, aperiam architecto rem!
+                    </p>
+                    <a href="#" class="w-fit p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Learn More</a>
+                </div>
+                <!-- Right -->
+                <div class="flex flex-col md:w-1/2">
+                    <img src="./assets/career.svg" alt="" class="w-full mx-auto my-auto dark:saturate-50">
+                </div>
+            </div>
+        </section>
+
+        <!-- Openings -->
+        <section id="openings" class="bg-zinc-100 dark:bg-zinc-700">
+            <div class="container flex flex-col items-center justify-center px-6 py-24 mx-auto space-y-12 md:pb-48">
+                <!-- Header -->
+                <div>
+                    <h2 class="max-w-xl text-center text-4xl lg:text-5xl">
+                        Our Open Positions
+                    </h2>
+                    <p class="max-w-xl text-center py-6">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dolor perspiciatis libero esse maxime repellat?
+                    </p>
+                </div>
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Item 1 -->
+                    <div class="col-auto p-6 space-y-6">
+                        <img src="./assets/computer.png" alt="" class="w-[128px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold text-center">
+                            Design & Content
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, fugit iusto aspernatur quo odio tempore quisquam repudiandae at?
+                        </p>
+                        <!-- Accordion 1 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-1" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    User Interface Designer
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 2 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-2" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Content Writer
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 3 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-3" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Content Strategist
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-auto p-6 space-y-6">
+                        <img src="./assets/new-product.png" alt="" class="w-[128px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold text-center">
+                            Product Development
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, fugit iusto aspernatur quo odio tempore quisquam repudiandae at?
+                        </p>
+                        <!-- Accordion 4 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-4" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Prototyper
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 5 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-5" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Front-End Developer
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 6 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-6" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Back-End Developer
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 7 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-7" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Product Marketer
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-auto p-6 space-y-6">
+                        <img src="./assets/settings.png" alt="" class="w-[128px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold text-center">
+                            Operations
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, labore officia fugiat neque veniam magnam quos temporibus quas.
+                        </p>
+                        <!-- Accordion 8 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-8" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Human Resources
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 9 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-9" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Community Manager
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    <a href="#" class="text-brightRedLight underline">
+                                        Full Job Description
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office -->
+        <section id="hero" class="relative">
+            <div class="absolute h-full w-full -z-10 opacity-20" id="office-bg"></div>
+            <div class="container flex flex-row px-6 py-32 justify-center mx-auto">
+                <div class="flex flex-col items-center mx-auto md:w-1/2">
+                    <h1 class="max-w-md text-4xl text-center font-bold md:text-5xl">
+                        The Office
+                    </h1>
+                    <p class="max-w-xl text-center py-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut illum unde tempora deleniti rerum possimus voluptas dicta magni, eligendi dolorem dolores nostrum sed quis facilis?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perks -->
+        <section id="perks" class="bg-zinc-100 dark:bg-zinc-700">
+            <div class="container flex flex-col items-center justify-center px-6 py-24 mx-auto space-y-12 md:pb-48">
+                <!-- Header -->
+                <div>
+                    <h2 class="max-w-xl text-center text-4xl lg:text-5xl">
+                        Perks & Benefits
+                    </h2>
+                    <p class="max-w-xl text-center py-6">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dolor perspiciatis libero esse maxime repellat?
+                    </p>
+                </div>
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Item 1 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/message.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Competitive Salary
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, fugit iusto aspernatur quo odio tempore quisquam repudiandae at?
+                        </p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/talking.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Healthcare
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis reiciendis aut beatae.
+                        </p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/analytics.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Paid Parental Leave
+                        </h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam dolorem alias ratione voluptatibus, minima qui.
+                        </p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/briefcase.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Daily Lunch
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nisi modi nobis consequuntur unde, tempore enim exercitationem alias amet.
+                        </p>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/process.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Annual Company Trip
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum reprehenderit nam facilis cumque modi repudiandae consequuntur ea corporis itaque.
+                        </p>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="col-auto h-full bg-white dark:bg-zinc-800 border-t-4 border-brightRed p-6 text-center space-y-6">
+                        <img src="./assets/time.png" alt="" class="w-[60px] mx-auto dark:invert">
+                        <h3 class="text-xl text-bold">
+                            Targeted Bonus Program
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nulla delectus tenetur nemo corporis facere iste! Vero maxime at et dolores quis eveniet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="action" class="md:relative">
+            <div class="md:absolute container flex flex-col md:flex-row justify-between mx-auto bg-brightRed px-6 py-12 md:inset-x-0 md:-bottom-16 space-y-6 md:space-y-0">
+                <h1 class="text-center md:text-left text-4xl md:text-5xl text-white">
+                    Ready to start?
+                </h1>
+                <a href="#" class="mx-auto md:mx-0 p-3 px-6 text-brightRed bg-white rounded-full shadow-2xl hover:bg-gray-700">Apply Today</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-800">
+            <div class="container flex flex-col-reverse justify-between px-6 pt-10 md:pt-24 pb-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+                <div class="flex flex-col-reverse items-center justify-between space-y-12 lg:flex-col lg:space-y-0 lg:items-start">
+                    <div class="mx-auto my-6 text-center text-white lg:hidden">
+                        Copyright &copy; 2022, All Rights Reserved
+                    </div>
+                    <!-- Logo -->
+                    <div>
+                        <img src="./assets/Logo-1.png" alt="" class="h-12 dark:invert">
+                    </div>
+                    <!-- Social -->
+                    <div class="flex justify-center space-x-4">
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-facebook.svg" alt="" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-instagram.svg" alt="" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-youtube.svg" alt="" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-pinterest.svg" alt="" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-twitter.svg" alt="" class="h-8">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- List -->
+                <div class="flex justify-around space-x-32">
+                    <div class="flex flex-col space-y-3 text-white">
+                        <a href="#" class="hover:text-brightRed">Home</a>
+                        <a href="#" class="hover:text-brightRed">Pricing</a>
+                        <a href="#" class="hover:text-brightRed">Product</a>
+                        <a href="#" class="hover:text-brightRed">About</a>
+                    </div>
+                    <div class="flex flex-col space-y-3 text-white">
+                        <a href="#" class="hover:text-brightRed">Careers</a>
+                        <a href="#" class="hover:text-brightRed">Community</a>
+                        <a href="#" class="hover:text-brightRed">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col justify-between">
+                    <form>
+                        <div class="flex space-x-3">
+                            <input type="email" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Get news in your inbox" />
+                            <button class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">Send</button>
+                        </div>
+                    </form>
+                    <div class="hidden text-white lg:block">
+                        Copyright &copy; 2022, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Javascript -->
+        <script src="./js/script.js"></script>
+        <script src="./js/darkMode.js"></script>
+        <script src="./js/accordion.js"></script>
+
+    </body>
+</html>

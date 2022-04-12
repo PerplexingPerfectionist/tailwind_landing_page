@@ -26,6 +26,12 @@ body {
     background-position: center center;
 }
 
+#office-bg {
+    background-image: url('../assets/office.webp');
+    background-size: cover;
+    background-position: bottom 10% center;
+}
+
 @media(max-width: 768px) {
     body {
         background-size: 800px;
