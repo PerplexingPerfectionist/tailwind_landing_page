@@ -1,6 +1,6 @@
 function handleAccordionClick(id) {
     // Animate Icon
-    document.getElementById(id).getElementsByTagName('img')[0].classList.toggle('rotate-45')
+    console.log( document.getElementById(id).getElementsByTagName('img')[0].classList.toggle('rotate-45') )
 
     // Toggle classes on sibling 'height and hidden'
     document.getElementById(id).nextElementSibling.classList.toggle('hidden')
