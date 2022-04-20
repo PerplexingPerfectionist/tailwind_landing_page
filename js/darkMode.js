@@ -11,11 +11,3 @@ function handleDarkMode() {
     moon.classList.toggle('flex')
     moon.classList.toggle('hidden')
 }
-
-dayNight.addEventListener('click', handleDarkMode)
-
-window.onunload = function() {
-    console.log("clearing event listeners prior to leaving page");
-    document.body.removeEventListener('click', handleDarkMode);
-    return;
-}
