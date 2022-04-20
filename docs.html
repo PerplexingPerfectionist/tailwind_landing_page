@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro beatae corporis nostrum vel pariatur error.">
+        <title>Tailwind Landing Page</title>
+
+        <link rel="shortcut icon" href="./assets/Logo-1.png" type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body class="dark:text-white dark:backdrop-invert dark:bg-zinc-200">
+        <!-- Nav -->
+        <nav class="relative container mx-auto p-6">
+            <div class="flex items-center justify-between relative">
+                <!-- Logo -->
+                <div class="pt-2">
+                    <img src="./assets/Logo-1.png" alt="logo" class="h-24 w-24 dark:invert" />
+                </div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="./index.html" class="hover:text-darkGreyishBlue">Home</a>
+                    <a href="./pricing.html" class="hover:text-darkGreyishBlue">Pricing</a>
+                    <a href="./product.html" class="hover:text-darkGreyishBlue">Product</a>
+                    <a href="./about.html" class="hover:text-darkGreyishBlue">About Us</a>
+                    <a href="./careers.html" class="hover:text-darkGreyishBlue">Careers</a>
+                </div>
+                <!-- Button -->
+                <a href="#" class="hidden md:block p-3 px-6 mr-12 text-white bg-brightRed rounded-full hover:bg-brightRedLight">Get Started</a>
+                <!-- Dark Mode -->
+                <span class="absolute right-0 cursor-pointer" id="dayNight" onClick="handleDarkMode()">
+                    <img src="./assets/moon.png" alt="" id="moon" class="h-8 w-8">
+                    <img src="./assets/sun.png" alt="" id="sun" class="hidden h-8 w-8 dark:invert">
+                </span>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="block mr-12 mt-2 hamburger md:hidden" aria-label="menu" onClick="handleMenuClick()">
+                    <span class="hamburger-top dark:invert"></span>
+                    <span class="hamburger-middle dark:invert"></span>
+                    <span class="hamburger-bottom dark:invert"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <div id="menu" class="hidden absolute z-50 flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white dark:bg-zinc-700 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <a href="./index.html">Home</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./product.html">Product</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./careers.html">Careers</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section id="hero" class="relative">
+            <div class="absolute h-full w-full -z-10 bg-gradient-to-b from-brightRedSupLight to-brightRedLight opacity-50 dark:bg-zinc-700"></div>
+            <div class="container flex flex-row px-6 py-32 justify-center mx-auto">
+                <div class="flex flex-col items-center mx-auto md:w-1/2">
+                    <h1 class="max-w-md text-4xl text-center font-bold md:text-5xl">
+                        Documentation
+                    </h1>
+                    <p class="max-w-md text-center py-6">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate illo illum deserunt nihil sit placeat facere!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Documents -->
+        <section id="documents" class="bg-zinc-100 dark:bg-zinc-700">
+            <div class="container flex flex-col items-center justify-center px-6 py-24 mx-auto space-y-12 md:pb-48">
+                <!-- Header -->
+                <div>
+                    <h2 class="max-w-xl text-center text-4xl lg:text-5xl">
+                        Installation, Documentation and Advanced Troubleshooting
+                    </h2>
+                    <p class="max-w-xl text-center py-6">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quisquam incidunt, itaque, nisi repellat eos corporis ipsa maxime deleniti temporibus mollitia culpa doloremque error molestias? Quod rem voluptates perferendis, architecto dolorem necessitatibus quam eius velit.
+                    </p>
+                </div>
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Item 1 -->
+                    <div class="col-auto row-span-3 p-6 space-y-6">
+                        <a href="#connect_platforms" class="block w-fit p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Conect Platforms</a>
+                        <a href="#web_hooks" class="block w-fit p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Web Hooks</a>
+                        <a href="#api_libraries" class="block w-fit p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">API Libraires</a>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-span-2 p-6 space-y-6" id="connect_platforms">
+                        <h3 class="text-xl text-bold text-center md:text-left">
+                            Connect Platforms
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing.
+                        </p>
+                        <!-- Accordion 1 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-1" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Introduction
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo beatae quidem natus labore et laudantium sapiente sequi ipsum corrupti neque voluptas, voluptate dignissimos error quae, maxime suscipit mollitia magni.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 2 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-2" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Installation
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ut nihil sunt recusandae qui impedit praesentium. Rerum cumque quasi sequi sit beatae atque quae! Accusamus iure modi aspernatur quasi libero.
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 3 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-3" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Getting Started
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum amet esse quibusdam vel quos sed cumque. Deleniti laudantium quas quos consequuntur saepe voluptas earum sed dolores mollitia ratione tempora esse perferendis provident voluptatem sapiente molestiae animi, iure architecto. Blanditiis, rem.
+                                </p>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ex. Voluptatem soluta sint, rem aliquam modi nemo vel, reprehenderit vero, illo temporibus corrupti excepturi! Temporibus, dolores!
+                                </p>
+                                <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt repudiandae mollitia blanditiis eius! A nulla et tempora ad voluptatem.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 4 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-4" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Server Settings
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi provident placeat dolorem deleniti quibusdam ad sunt consequuntur, recusandae et distinctio nulla error laboriosam fugiat ex nam fugit reiciendis sapiente beatae vero quia deserunt? Odio, aut minus explicabo facilis quos labore accusantium voluptatum.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo voluptas tempore eligendi harum voluptatem exercitationem totam molestias debitis tenetur nam modi, ipsa unde culpa, in consectetur cumque assumenda aliquam. Atque architecto dolorem enim molestiae.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, atque! Sint facere sapiente necessitatibus animi voluptas quod dolorum culpa qui expedita iure. Vel quasi alias eum ut laboriosam magni in.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-span-2 p-6 space-y-6" id="web_hooks">
+                        <h3 class="text-xl text-bold text-center md:text-left">
+                            Web Hooks
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam.
+                        </p>
+                        <!-- Accordion 5 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-5" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Introduction
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eaque enim id molestias minima dolore nemo a necessitatibus tempore delectus!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 6 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-6" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Getting Started
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati quam deleniti molestias aperiam sint sed maxime illo animi cupiditate accusamus hic itaque facilis quis molestiae, in pariatur iusto explicabo voluptate. Nobis aperiam temporibus dolorem laboriosam nemo error animi!
+                                </p>
+                                <p>
+                                    Debitis nostrum, fuga, ad placeat distinctio, architecto quos enim rem molestiae provident nisi perferendis. Quaerat possimus nobis voluptate est eius?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem ducimus, aperiam nam ut quae optio! Sapiente, fugiat ducimus porro eius repellat rem nesciunt vero unde quas laborum soluta et.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-span-2 p-6 space-y-6" id="api_libraries">
+                        <h3 class="text-xl text-bold text-center md:text-left">
+                            API Libraires
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, labore officia fugiat neque veniam magnam quos temporibus quas.
+                        </p>
+                        <!-- Accordion 7 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-7" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Introduction
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, incidunt fugit. Fugit eligendi eaque in, quis corrupti ullam non atque vitae ea exercitationem iste aspernatur incidunt obcaecati saepe aliquam debitis.
+                                </p>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat est commodi neque iste tempore assumenda, ratione eum facere nesciunt facilis quidem tempora nulla accusamus at temporibus necessitatibus sequi animi cumque aliquid dolor architecto debitis distinctio explicabo illum. Non earum et inventore ex unde consectetur dolore.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit vel temporibus maxime quo labore pariatur.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 8 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-8" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Installation
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In deserunt similique corporis pariatur ipsa mollitia atque voluptatem error eos recusandae accusantium fuga nesciunt, officia consequatur quas nam. Doloribus aperiam saepe quo in! Nisi perferendis ad doloremque ullam, voluptatum enim ab quis natus quae, expedita similique quia provident itaque?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, beatae qui ut dolorum cumque saepe eos quam officiis exercitationem, laudantium neque nostrum optio ducimus?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque corrupti, et esse blanditiis nisi, reiciendis ex iusto porro error molestiae possimus, tempora quam nulla harum dignissimos minus sit earum saepe!
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Accordion 9 -->
+                        <div class="flex flex-col bg-white dark:bg-zinc-800 shadow-lg dark:shadow-none dark:border dark:border-zinc-500">
+                            <!-- Header -->
+                            <button class="flex flex-row justify-between p-6" id="accordion-9" onClick="handleAccordionClick(this.id)">
+                                <h3 class="text-xl text-brightRedLight">
+                                    Server Settings
+                                </h3>
+                                <img src="./assets/add_icon.png" alt="" class="w-7 dark:invert duration-75" >
+                            </button>
+                            <!-- Expander -->
+                            <div class="space-y-6 px-6 pb-6 overflow-hidden hidden h-0">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maiores nesciunt, obcaecati culpa veniam, aliquid aspernatur similique quia fugiat sed sequi quae doloribus accusamus dolor soluta, recusandae ratione tempore architecto!
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore necessitatibus quis earum! Sit ducimus recusandae sint maxime ipsa repudiandae, illum autem itaque! Iste iusto error quibusdam quasi dolorum laborum. Tempora ex sit sunt nemo, architecto ducimus, voluptatum perferendis ipsum sequi qui autem. Numquam!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature -->
+        <section id="feature">
+            <div class="container flex flex-col-reverse justify-center mb-24 mx-auto md:flex-row">
+                <!-- Left -->
+                <div class="flex flex-col justify-center px-12 py-24 md:w-1/2 space-y-6">
+                    <div class="w-24 h-[2px] bg-brightRed mx-auto md:mx-0"></div>
+                    <h2 class="max-w-xl text-center md:text-left text-4xl lg:text-5xl">
+                        Request a Feature or Open a Ticket
+                    </h2>
+                    <p class="max-w-lg text-center md:text-left">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex ducimus blanditiis ipsam, accusantium consequatur delectus numquam enim incidunt minus modi quisquam quia?
+                    </p>
+                    <a href="#" class="w-fit p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Contact Us</a>
+                </div>
+                <!-- Right -->
+                <div class="flex flex-col md:w-1/2">
+                    <img src="./assets/IT_Support.svg" alt="" class="w-3/4 mx-auto my-12 dark:saturate-50">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="action" class="md:relative">
+            <div class="md:absolute container flex flex-col md:flex-row justify-between mx-auto bg-brightRed px-6 py-12 md:inset-x-0 md:-bottom-16 space-y-6 md:space-y-0">
+                <h1 class="text-center md:text-left text-4xl md:text-5xl text-white">
+                    Ready to Get Started?
+                </h1>
+                <a href="#" class="mx-auto md:mx-0 p-3 px-6 text-brightRed bg-white rounded-full shadow-2xl hover:bg-gray-700">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-800">
+            <div class="container flex flex-col-reverse justify-between px-6 pt-10 md:pt-24 pb-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+                <div class="flex flex-col-reverse items-center justify-between space-y-12 lg:flex-col lg:space-y-0 lg:items-start">
+                    <div class="mx-auto my-6 text-center text-white lg:hidden">
+                        Copyright &copy; 2022, All Rights Reserved
+                    </div>
+                    <!-- Logo -->
+                    <div>
+                        <img src="./assets/Logo-1.png" alt="" class="h-12 w-12 dark:invert">
+                    </div>
+                    <!-- Social -->
+                    <div class="flex justify-center space-x-4">
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-facebook.svg" alt="Facebook" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-instagram.svg" alt="Instagram" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-youtube.svg" alt="YouTube" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-pinterest.svg" alt="Pinterest" class="h-8">
+                        </a>
+                        <!-- Link -->
+                        <a href="#">
+                            <img src="./assets/icon-twitter.svg" alt="Twitter" class="h-8">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- List -->
+                <div class="flex justify-around space-x-32">
+                    <div class="flex flex-col space-y-3 text-white">
+                        <a href="./index.html" class="hover:text-brightRed">Home</a>
+                        <a href="./pricing.html" class="hover:text-brightRed">Pricing</a>
+                        <a href="./product.html" class="hover:text-brightRed">Product</a>
+                        <a href="./about.html" class="hover:text-brightRed">About</a>
+                    </div>
+                    <div class="flex flex-col space-y-3 text-white">
+                        <a href="./careers.html" class="hover:text-brightRed">Careers</a>
+                        <a href="#" class="hover:text-brightRed">Documents</a>
+                        <a href="#" class="hover:text-brightRed">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col justify-between">
+                    <form>
+                        <div class="flex space-x-3">
+                            <input type="email" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Get news in your inbox" />
+                            <button class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">Send</button>
+                        </div>
+                    </form>
+                    <div class="hidden text-white lg:block">
+                        Copyright &copy; 2022, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Javascript -->
+        <script src="./js/script.js"></script>
+        <script src="./js/darkMode.js"></script>
+        <script src="./js/accordion.js"></script>
+
+    </body>
+</html>

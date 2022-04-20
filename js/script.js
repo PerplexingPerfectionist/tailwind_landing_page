@@ -2,8 +2,8 @@
 const button = document.getElementById('menu-btn')
 const navi = document.getElementById('menu')
 
-button.addEventListener('click', () => {
+function handleMenuClick() {
     button.classList.toggle('open')
     navi.classList.toggle('flex')
     navi.classList.toggle('hidden')
-})
+}
